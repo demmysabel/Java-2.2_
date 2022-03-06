@@ -1,18 +1,16 @@
 
-public class Main {
+public class Main<totalSum> {
     public static void main(String[] args) {
         int addingSum = 500;
         int basicSum = 100;
         int bonus = addingSum / 100;
-        int PresentSum = bonus + addingSum + basicSum;
-        int noPresent = addingSum+basicSum;
+        int presentSum = bonus + addingSum + basicSum;
         int totalSum;
-        if (addingSum < 1000) {
-            totalSum = noPresent;
-        } else {
-            totalSum=PresentSum;
+        if (addingSum >= 1000) {
+            totalSum = presentSum;
+        } else {totalSum=addingSum+basicSum;
 
         }
-        System.out.println("Итоговая сумма"+totalSum);
+        System.out.println("Итоговая сумма"+totalSum) ;
     }
 }
